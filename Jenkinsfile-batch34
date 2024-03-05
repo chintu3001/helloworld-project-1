@@ -1,0 +1,2 @@
++ maven clean package
+/var/lib/jenkins/workspace/pipeline1@tmp/durable-85cd0338/script.sh.copy: 1: maven: not found
