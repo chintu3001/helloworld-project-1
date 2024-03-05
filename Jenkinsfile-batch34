@@ -1,2 +1,19 @@
-+ maven clean package
-/var/lib/jenkins/workspace/pipeline1@tmp/durable-85cd0338/script.sh.copy: 1: maven: not found
+pipeline {
+    agent { label 'master'}
+    tools{
+        jdk 'JAVA'
+        maven 'Maven'
+    }
+        stages {
+            stage('git checkcout'){
+                steps{
+                    git branch: 'main',
+                    url: 'https://github.com/chintu3001/helloworld-project-1.git'
+                }
+                        }
+        stage ('Maven build'){
+            steps {
+                sh 'mvn clean package' }
+        }
+    }
+}
